@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Cipher makes zero network connections. This enforces it at the OS level. -->
 <network-security-config>
     <base-config cleartextTrafficPermitted="false">
         <trust-anchors />
