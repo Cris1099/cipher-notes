@@ -33,7 +33,6 @@ fun NoteCard(note: Note, onClick: () -> Unit, modifier: Modifier = Modifier) {
         shape = MaterialTheme.shapes.medium
     ) {
         Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            // Header
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -57,7 +56,6 @@ fun NoteCard(note: Note, onClick: () -> Unit, modifier: Modifier = Modifier) {
                 )
             }
 
-            // Preview
             if (note.encrypted) {
                 Text(
                     text = "••••••••••••••••••••",
@@ -100,7 +98,6 @@ fun NoteCard(note: Note, onClick: () -> Unit, modifier: Modifier = Modifier) {
                 )
             }
 
-            // Footer
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
