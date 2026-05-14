@@ -1,5 +1,3 @@
-# Cipher ProGuard rules — minimal, privacy-first
-
 # Keep all data classes
 -keep class dev.cipher.notes.data.** { *; }
 
