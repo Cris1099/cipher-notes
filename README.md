@@ -6,7 +6,7 @@ Notes. Encrypted. Local. Nothing more.
 
 ### Installation
 
-**Option 1: IzzyOnDroid** (recommended for privacy-focused users)
+**Option 1: IzzyOnDroid** (recommended for privacy-focused users) - not yet available
 ```
 F-Droid → Settings → Repositories → Add custom repo
 https://apt.izzysoft.de
