@@ -69,7 +69,6 @@ fun EncryptDialog(
                     singleLine = true
                 )
 
-                // Strength indicator
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
