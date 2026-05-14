@@ -40,7 +40,6 @@ fun TodoScreen(
     val completedCount = uiState.items.count { it.done }
 
     Column(modifier = modifier.fillMaxSize()) {
-        // Top bar
         TopAppBar(
             title = { },
             navigationIcon = {
@@ -63,7 +62,6 @@ fun TodoScreen(
         )
 
         Column(modifier = Modifier.fillMaxSize()) {
-            // Title
             TextField(
                 value = uiState.title,
                 onValueChange = vm::setTitle,
@@ -81,7 +79,6 @@ fun TodoScreen(
                 singleLine = true
             )
 
-            // Metadata row
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -131,7 +128,6 @@ fun TodoScreen(
 
             Divider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f))
 
-            // Todo items
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
