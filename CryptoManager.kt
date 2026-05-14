@@ -17,13 +17,6 @@ import javax.inject.Singleton
  * References:
  * - Google Tink AEAD (https://developers.google.com/tink/manage-keys)
  * - OWASP Password Storage (https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
- * 
- * Design:
- * - PBKDF2 with 200k iterations + SHA-256 for key derivation
- * - AES-256-GCM for authenticated encryption
- * - Random salt (16 bytes) + random IV (12 bytes) per encryption
- * - No passwords stored ever
- * - All crypto on-device, zero network
  */
 @Singleton
 class CryptoManager @Inject constructor(
@@ -48,14 +41,11 @@ class CryptoManager @Inject constructor(
      * @return Base64-encoded encrypted blob
      */
     fun encrypt(plaintext: String, password: String): String {
-        // Generate random salt and IV
         val salt = ByteArray(SALT_LENGTH).also { SecureRandom().nextBytes(it) }
         val iv = ByteArray(IV_LENGTH).also { SecureRandom().nextBytes(it) }
 
-        // Derive encryption key from password
         val key = deriveKey(password, salt)
 
-        // Encrypt using AES-256-GCM
         val cipher = Cipher.getInstance("AES/GCM/NoPadding")
         cipher.init(
             Cipher.ENCRYPT_MODE,
@@ -64,7 +54,6 @@ class CryptoManager @Inject constructor(
         )
         val ciphertext = cipher.doFinal(plaintext.toByteArray(Charsets.UTF_8))
 
-        // Pack salt + IV + ciphertext
         val combined = salt + iv + ciphertext
         return android.util.Base64.encodeToString(combined, android.util.Base64.NO_WRAP)
     }
@@ -80,15 +69,12 @@ class CryptoManager @Inject constructor(
     fun decrypt(cipherB64: String, password: String): String {
         val combined = android.util.Base64.decode(cipherB64, android.util.Base64.NO_WRAP)
 
-        // Unpack salt, IV, ciphertext
         val salt = combined.sliceArray(0 until SALT_LENGTH)
         val iv = combined.sliceArray(SALT_LENGTH until SALT_LENGTH + IV_LENGTH)
         val ciphertext = combined.sliceArray(SALT_LENGTH + IV_LENGTH until combined.size)
 
-        // Re-derive key using stored salt
         val key = deriveKey(password, salt)
 
-        // Decrypt
         val cipher = Cipher.getInstance("AES/GCM/NoPadding")
         cipher.init(
             Cipher.DECRYPT_MODE,
@@ -116,7 +102,7 @@ class CryptoManager @Inject constructor(
             PBKDF2_KEY_LENGTH
         )
         val secretKey = factory.generateSecret(spec)
-        spec.clearPassword()  // Clear password from memory
+        spec.clearPassword()
         return SecretKeySpec(secretKey.encoded, 0, secretKey.encoded.size, "AES")
     }
 
