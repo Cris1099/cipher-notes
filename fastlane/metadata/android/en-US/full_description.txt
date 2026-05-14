@@ -1,0 +1,8 @@
+Cipher is a privacy-first notes app with AES-256-GCM encryption. 
+All data stays on your device. Zero cloud, zero telemetry.
+
+Features:
+- Text notes & checklists
+- Per-note password encryption
+- Offline-only
+- Open source (MIT)
