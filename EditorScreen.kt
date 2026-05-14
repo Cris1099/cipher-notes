@@ -32,7 +32,6 @@ fun EditorScreen(
     var showDeleteConfirm by remember { mutableStateOf(false) }
 
     Column(modifier = modifier.fillMaxSize()) {
-        // Top bar
         TopAppBar(
             title = { },
             navigationIcon = {
@@ -61,7 +60,6 @@ fun EditorScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            // Title input
             TextField(
                 value = uiState.title,
                 onValueChange = vm::setTitle,
@@ -77,7 +75,6 @@ fun EditorScreen(
                 singleLine = true
             )
 
-            // Metadata
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -130,7 +127,6 @@ fun EditorScreen(
 
             Divider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f))
 
-            // Content area
             TextField(
                 value = uiState.content,
                 onValueChange = { vm.setContent(it); vm.save() },
@@ -153,7 +149,6 @@ fun EditorScreen(
         }
     }
 
-    // Encrypt dialog
     if (showEncryptDialog) {
         EncryptDialog(
             onEncrypt = { password ->
@@ -166,7 +161,6 @@ fun EditorScreen(
         )
     }
 
-    // Delete confirm
     if (showDeleteConfirm) {
         AlertDialog(
             onDismissRequest = { showDeleteConfirm = false },
