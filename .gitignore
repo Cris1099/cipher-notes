@@ -1,0 +1,18 @@
+# Budowanie i tymczasowe
+.gradle/
+build/
+/build-artifacts/
+/release/
+.kotlin/
+
+# Konfiguracja IDE
+.idea/
+*.iml
+
+# Pliki lokalne (wrażliwe dane!)
+local.properties
+cipher.jks
+cipher
+
+# Logi
+*.log

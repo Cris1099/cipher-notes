@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cipher</string>
+    <string name="note_hint">Start writing…</string>
+    <string name="title_hint">Title…</string>
+    <string name="search_hint">Search notes…</string>
+    <string name="add_item_hint">Add item…</string>
+    <string name="empty_title">No notes yet</string>
+    <string name="empty_body">Tap + to create your first note.</string>
+    <string name="delete_confirm">Delete this note? This cannot be undone.</string>
+    <string name="encrypted_preview">••••••••••••••••••••</string>
+    <string name="encrypt_title">Encrypt note</string>
+    <string name="encrypt_body">Set a password to lock this note with AES-256-GCM. You\'ll need it every time you open it.</string>
+    <string name="password_hint">Choose a password…</string>
+    <string name="confirm_hint">Confirm password…</string>
+    <string name="unlock_title">Note encrypted</string>
+    <string name="unlock_body">Enter the password to decrypt this note.</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="encrypted_ok">Note encrypted 🔒</string>
+    <string name="decrypted_ok">Decrypted 🔓</string>
+    <string name="exported_ok">Exported ↓</string>
+    <string name="converted_checklist">Converted to checklist</string>
+    <string name="converted_note">Converted to note</string>
+    <string name="no_internet">No internet — by design.</string>
+</resources>

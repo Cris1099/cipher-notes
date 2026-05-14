@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1017"/>
+      <stop offset="100%" stop-color="#131820"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00E5A0"/>
+      <stop offset="100%" stop-color="#00B87C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+
+  <!-- Grid texture -->
+  <g stroke="#00E5A0" stroke-width="0.6" opacity="0.06">
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+  </g>
+
+  <!-- Notepad lines — readable text -->
+  <g stroke="#2E3D55" stroke-width="10" stroke-linecap="round">
+    <line x1="164" y1="182" x2="300" y2="182"/>
+    <line x1="164" y1="222" x2="280" y2="222"/>
+  </g>
+
+  <!-- Encrypted lines — dots replacing characters -->
+  <g fill="#2E3D55">
+    <circle cx="164" cy="274" r="6"/><circle cx="184" cy="274" r="6"/>
+    <circle cx="204" cy="274" r="6"/><circle cx="224" cy="274" r="6"/>
+    <circle cx="244" cy="274" r="6"/><circle cx="264" cy="274" r="6"/>
+    <circle cx="284" cy="274" r="6"/><circle cx="304" cy="274" r="6"/>
+
+    <circle cx="164" cy="314" r="6"/><circle cx="184" cy="314" r="6"/>
+    <circle cx="204" cy="314" r="6"/><circle cx="224" cy="314" r="6"/>
+    <circle cx="244" cy="314" r="6"/>
+
+    <circle cx="164" cy="354" r="6"/><circle cx="184" cy="354" r="6"/>
+    <circle cx="204" cy="354" r="6"/><circle cx="224" cy="354" r="6"/>
+    <circle cx="244" cy="354" r="6"/><circle cx="264" cy="354" r="6"/>
+    <circle cx="284" cy="354" r="6"/>
+  </g>
+
+  <!-- Pencil / writing tool — angled, accent colored -->
+  <g transform="rotate(-38, 360, 200)">
+    <!-- Pencil body -->
+    <rect x="336" y="148" width="36" height="112" rx="6"
+          fill="url(#accent)"/>
+    <!-- Pencil tip -->
+    <polygon points="336,260 372,260 354,295" fill="#00B87C"/>
+    <!-- Pencil eraser -->
+    <rect x="336" y="136" width="36" height="18" rx="4" fill="#1A2130"/>
+    <!-- Pencil line detail -->
+    <line x1="354" y1="148" x2="354" y2="260" stroke="#00B87C" stroke-width="2" opacity="0.4"/>
+  </g>
+</svg>
