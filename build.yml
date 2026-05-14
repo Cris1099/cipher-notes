@@ -41,10 +41,10 @@ jobs:
             - **Size:** ~8-10MB
             
             ### Privacy
-            ✅ Zero internet
-            ✅ Zero telemetry
-            ✅ AES-256-GCM encryption
-            ✅ Open source (MIT)
+            - Zero internet
+            - Zero telemetry
+            - AES-256-GCM encryption
+            - Open source (MIT)
             
             ### Installation
             1. Download APK
