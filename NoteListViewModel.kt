@@ -16,8 +16,8 @@ import javax.inject.Inject
 data class ListUiState(
     val notes: List<Note> = emptyList(),
     val isLoading: Boolean = false,
-    val sortBy: String = "modified", // modified, created, title
-    val filterBy: String = "all" // all, note, todo, encrypted
+    val sortBy: String = "modified",
+    val filterBy: String = "all"
 )
 
 @HiltViewModel
@@ -61,7 +61,6 @@ class NoteListViewModel @Inject constructor(
     private fun applyFiltersAndSort(notes: List<Note>, query: String): List<Note> {
         var filtered = notes
 
-        // Filter
         filtered = when (_uiState.value.filterBy) {
             "note"      -> filtered.filter { it.type == NoteType.TEXT }
             "todo"      -> filtered.filter { it.type == NoteType.TODO }
@@ -69,7 +68,6 @@ class NoteListViewModel @Inject constructor(
             else        -> filtered
         }
 
-        // Search
         if (query.isNotBlank()) {
             filtered = filtered.filter {
                 it.title.contains(query, ignoreCase = true) ||
@@ -77,7 +75,6 @@ class NoteListViewModel @Inject constructor(
             }
         }
 
-        // Sort
         filtered = when (_uiState.value.sortBy) {
             "created" -> filtered.sortedByDescending { it.createdAt }
             "title"   -> filtered.sortedBy { it.title }
