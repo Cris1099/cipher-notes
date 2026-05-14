@@ -31,7 +31,6 @@ fun NewNoteDialog(
                 verticalArrangement = Arrangement.spacedBy(12.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                // Text note option
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -67,7 +66,6 @@ fun NewNoteDialog(
                     }
                 }
 
-                // Checklist option
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
