@@ -129,5 +129,5 @@ No hidden APIs. No telemetry hooks. All code reviewable.
 
 ---
 
-**Last updated:** 2024
+**Last updated:** 2026
 **Cipher v1.0.0**
