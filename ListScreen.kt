@@ -39,7 +39,6 @@ fun ListScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
-            // Top bar
             TopAppBar(
                 title = {
                     Column {
@@ -70,7 +69,6 @@ fun ListScreen(
                 )
             )
 
-            // Search bar
             TextField(
                 value = searchQuery,
                 onValueChange = vm::setSearchQuery,
@@ -98,7 +96,6 @@ fun ListScreen(
                 textStyle = MaterialTheme.typography.bodySmall
             )
 
-            // Filter tabs
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -120,7 +117,6 @@ fun ListScreen(
                     }
             }
 
-            // Notes list or empty state
             if (uiState.notes.isEmpty()) {
                 Box(
                     modifier = Modifier
@@ -173,7 +169,6 @@ fun ListScreen(
             }
         }
 
-        // FAB
         FloatingActionButton(
             onClick = onCreateNote,
             modifier = Modifier
@@ -206,7 +201,6 @@ fun NoteCard(
             modifier = Modifier.padding(14.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            // Header
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -243,7 +237,6 @@ fun NoteCard(
                 }
             }
 
-            // Preview
             when {
                 note.encrypted -> {
                     Text(
@@ -304,7 +297,6 @@ fun NoteCard(
                 }
             }
 
-            // Footer
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
