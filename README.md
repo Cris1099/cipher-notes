@@ -33,7 +33,7 @@ cd cipher-notes
 
 - **Your phone is your vault.** Everything stays on device.
 - **No accounts.** No login. No tracking who you are.
-- **Small footprint.** 8-10MB. No bloat.
+- **Small footprint.** No bloat.
 - **Auditable.** Open source. Every line of code visible.
 - **Privacy by design.** No internet permission. Zero telemetry hooks.
 
