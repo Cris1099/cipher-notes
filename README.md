@@ -21,7 +21,7 @@ Or: sideload via file manager
 
 **Option 3: Build from source**
 ```bash
-git clone https://github.com/yourusername/cipher-notes.git
+git clone https://github.com/Cris1099/cipher-notes
 cd cipher-notes
 ./gradlew assembleRelease
 # APK: app/build/outputs/apk/release/app-release.apk
@@ -72,7 +72,7 @@ All dependencies are FOSS and auditable:
 
 ```bash
 # Clone
-git clone https://github.com/yourusername/cipher-notes.git
+git clone https://github.com/Cris1099/cipher-notes
 cd cipher-notes
 
 # Build
