@@ -52,13 +52,13 @@ All dependencies are FOSS and auditable:
 
 ## What it does NOT do
 
-❌ Cloud sync
-❌ Account creation
-❌ Analytics
-❌ Advertisements
-❌ Internet calls (network config enforces it)
-❌ Crash reporting
-❌ Any telemetry
+- Cloud sync
+- Account creation
+- Analytics
+- Advertisements
+- Internet calls (network config enforces it)
+- Crash reporting
+- Any telemetry
 
 ## Privacy by design
 
