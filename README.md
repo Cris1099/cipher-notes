@@ -15,7 +15,7 @@ https://apt.izzysoft.de
 
 **Option 2: GitHub Releases**
 ```
-Download APK → adb install app-release.apk
+Download APK → adb install CipherNotes-release.apk
 Or: sideload via file manager
 ```
 
@@ -24,7 +24,7 @@ Or: sideload via file manager
 git clone https://github.com/Cris1099/cipher-notes
 cd cipher-notes
 ./gradlew assembleRelease
-# APK: app/build/outputs/apk/release/app-release.apk
+# APK: app/build/outputs/apk/release/CipherNotes-release.apk
 ```
 
 ---
@@ -78,7 +78,7 @@ cd cipher-notes
 # Build
 ./gradlew assembleRelease
 
-# Output: app/build/outputs/apk/release/app-release.apk
+# Output: app/build/outputs/apk/release/CipherNotes-release.apk
 ```
 
 ## Installation
